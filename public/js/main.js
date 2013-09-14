@@ -8,6 +8,23 @@ if (!window.DeviceMotionEvent) {
 	//alert("No motion events supported");
 }
 
+
+function Tracker() {
+  this._ax = 0;
+  this._ay = 0;
+  this._az = 0;
+}
+
+_p = Tracker.prototype;
+
+Tracker.supportsMotion = function() {
+  return !!window.DeviceMotionEvent;
+};
+
+_p._installListeners = function() {
+
+};
+
 var ax = 0;
 var ay = 0;
 var az = 0;
